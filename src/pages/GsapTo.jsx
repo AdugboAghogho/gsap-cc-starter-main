@@ -9,6 +9,8 @@ const GsapTo = () => {
       repeat: -1,
       yoyo: true,
       rotate: 360,
+      duration: 4,
+      ease: 'elastic',
     })
   }, []);
 
