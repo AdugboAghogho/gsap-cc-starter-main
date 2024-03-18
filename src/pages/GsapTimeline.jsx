@@ -22,7 +22,7 @@ const GsapTimeline = () => {
       x: 500,
       scale: 1,
       rotation: 360,
-      borderRadius: '8px',
+      borderRadius: '15px',
       duration: 2,
       ease: "back.inOut"
     })
