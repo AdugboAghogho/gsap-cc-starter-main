@@ -1,12 +1,26 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
+import { useGSAP } from '@gsap/react';
 
 
 gsap.registerPlugin(ScrollTrigger)
 const GsapScrollTrigger = () => {
   const scrollRef = useRef();
   // TODO: Implement the gsap scroll trigger
+  useGSAP(() => {
+    const boxes = gsap.utils.toArray
+    (scrollRef.current.children);
+
+    boxes.forEach((box) => {
+      gsap.to(box, {
+        x: 150,
+        rotation: 360,
+        borderRadius: '100%',
+        scale: 1.5
+      })
+    })
+  }, [])
 
   return (
     <main>
