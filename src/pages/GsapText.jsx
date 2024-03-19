@@ -9,6 +9,17 @@ const GsapText = () => {
       opacity: 1,
       y: 0,
     })
+
+    gsap.fromTo('.para', {
+      opacity: 0,
+      y: 0,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      delay: 1,
+      stagger: 0.1,
+    })
   }, [])
 
   return (
